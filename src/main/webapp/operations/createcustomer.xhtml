@@ -24,44 +24,148 @@
 
             <h:form id="newCustomerForm">
                 <p:messages autoUpdate="true" infoStyle="color:darkgreen" errorStyle="color:darkred" />
-                <p:panelGrid id="displayNewCustomer" columns="2" cellpadding="4" style="margin:0 auto;">
+                <p:accordionPanel header="Job Details" multiple="true"  toggleSpeed="500" closeSpeed="500" widgetVar="panel" style="margin-bottom:20px">
+                 <p:tab title="Customer Details">
+                    <table style="width: 100%; border-collapse: separate;">
+                        <tr>
+                        <td  align="left" width="15%">
                     <h:outputText value="Customer Name :" ></h:outputText>
-                    <p:inputText  id="name" value="#{customerManagedBean.newCustomer.name}" required="true" requiredMessage="Please Enter Customer Name!" label="Customer Name "></p:inputText>
-                    <h:outputText value="Account Number :" ></h:outputText>
-                    <p:inputText  id="customeraccountnumber" value="#{customerManagedBean.newCustomer.accountNumber}" required="true" requiredMessage="Please Enter Account Number!" label="Account Number "></p:inputText>
-                    <h:outputText value="Tax Id No :"></h:outputText>
-                    <p:inputText id="taxidno"  value="#{customerManagedBean.newCustomer.taxidNo}" required="true" requiredMessage="Please Enter Tax Id No!" label="Tax Id No"></p:inputText>
-                    <h:outputText value="Term :"></h:outputText>
-                    <p:inputText id="term"  value="#{customerManagedBean.newCustomer.term}" required="true" requiredMessage="Please Enter Term!" label="Term"></p:inputText>
-                    <h:outputText value="Email :"></h:outputText>
-                    <p:inputText id="email"  value="#{customerManagedBean.newCustomer.email}" required="true" requiredMessage="Please Enter Email!" label="Email"></p:inputText>
+                        </td>
+                        <td align="left" width="35%">
+                    <p:inputText  id="name" value="#{customerManagedBean.newCustomer.name}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Customer Name!" label="Customer Name "></p:inputText>
+                        </td>
+                            <td align="left" width="15%" >
+                                <h:outputText value="Account Number :" ></h:outputText>
+                            </td>
+                            <td align="left" width="35%">
+                                <p:inputText  id="customeraccountnumber" value="#{customerManagedBean.newCustomer.accountNumber}"  styleClass="redasterisk" required="true" requiredMessage="Please Enter Account Number!" label="Account Number "></p:inputText>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td align="left" width="15%">
+                        <h:outputText value="Tax Id No :"></h:outputText>
+                        </td>
+                        <td align="left" width="35%">
+                    <p:inputText id="taxidno"  value="#{customerManagedBean.newCustomer.taxidNo}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Tax Id No!" label="Tax Id No"></p:inputText>
+                        </td>
+                            <td align="left" width="15%">
+                                <h:outputText value="Term :"></h:outputText>
+                            </td>
+                            <td align="left" width="35%">
+                                <p:inputText id="term"  value="#{customerManagedBean.newCustomer.term}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Term!" label="Term"></p:inputText>
+                            </td>
+                        </tr>
+                        </table>
+                     </p:tab>
+                    </p:accordionPanel>
+                <p:accordionPanel  multiple="true"  toggleSpeed="500" closeSpeed="500" widgetVar="panel" style="margin-bottom:20px">
+                    <p:tab title="Customer Vehicle Details">
+                        <table style="width: 100%; border-collapse: separate;">
+                        <tr>
+                        <td align="left" width="15%">
                     <h:outputText value="Engine :"></h:outputText>
-                    <p:inputText id="engine"  value="#{customerManagedBean.newCustomer.engine}" required="true" requiredMessage="Please Enter Engine!" label="Engine"></p:inputText>
-                    <h:outputText value="ChassisNo :"></h:outputText>
-                    <p:inputText id="chassisno"  value="#{customerManagedBean.newCustomer.chassisNo}" required="true" requiredMessage="Please Enter Chassis No!" label="Chassis No"></p:inputText>
-                    <h:outputText value="Capacity :"></h:outputText>
-                    <p:inputText id="capacity"  value="#{customerManagedBean.newCustomer.capacity}" required="true" requiredMessage="Please Enter Capacity!" label="Capacity"></p:inputText>
-                    <h:outputText value="Color :"></h:outputText>
-                    <p:inputText id="color"  value="#{customerManagedBean.newCustomer.color}" required="true" requiredMessage="Please Enter Color!" label="Color"></p:inputText>
+                        </td>
+                        <td align="left" width="35%">
+                    <p:inputText id="engine"  value="#{customerManagedBean.newCustomer.engine}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Engine!" label="Engine"></p:inputText>
+                        </td>
+                            <td align="left" width="15%">
+                                <h:outputText value="ChassisNo :"></h:outputText>
+                            </td>
+                            <td align="left" width="35%">
+                                <p:inputText id="chassisno"  value="#{customerManagedBean.newCustomer.chassisNo}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Chassis No!" label="Chassis No"></p:inputText>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td align="left" width="15%">
+                        <h:outputText value="Capacity :"></h:outputText>
+                        </td>
+                        <td align="left" width="35%">
+                    <p:inputText id="capacity"  value="#{customerManagedBean.newCustomer.capacity}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Capacity!" label="Capacity"></p:inputText>
+                        </td>
+                            <td align="left" width="15%">
+                                <h:outputText value="Color :"></h:outputText>
+                            </td>
+                            <td align="left" width="35%">
+                                <p:inputText id="color"  value="#{customerManagedBean.newCustomer.color}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Color!" label="Color"></p:inputText>
+                            </td>
+                        </tr>
+                    </table>
+                    </p:tab>
+                    </p:accordionPanel>
+                <p:accordionPanel header="Job Details" multiple="true"  toggleSpeed="500" closeSpeed="500" widgetVar="panel" style="margin-bottom:20px">
+                    <p:tab title="Customer Address Details">
+                            <table style="width: 100%; border-collapse: separate;">
+                                <tr>
+                                <td align="left" width="15%">
                     <h:outputText value="Address :"></h:outputText>
-                    <p:inputTextarea rows="6" cols="33" id="address"  value="#{customerManagedBean.newCustomer.address}" required="true" requiredMessage="Please Enter Address!" label="Address"></p:inputTextarea>
-                    <h:outputText value="City :"></h:outputText>
-                    <p:inputText id="City"  value="#{customerManagedBean.newCustomer.city}" required="true" requiredMessage="Please Enter City!" label="City"></p:inputText>
+                                </td>
+                                <td align="left" width="35%">
+                    <p:inputTextarea rows="6" cols="33" id="address"  value="#{customerManagedBean.newCustomer.address}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Address!" label="Address"></p:inputTextarea>
+                                </td>
+                                    <td align="left" width="15%">
+                                        <h:outputText value="City :"></h:outputText>
+                                    </td>
+                                    <td align="left" width="35%">
+                                        <p:inputText id="City"  value="#{customerManagedBean.newCustomer.city}" styleClass="redasterisk" required="true" requiredMessage="Please Enter City!" label="City"></p:inputText>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td align="left" width="15%">
                     <h:outputText value="State :"></h:outputText>
-                    <p:inputText id="state"  value="#{customerManagedBean.newCustomer.state}" required="true" requiredMessage="Please Enter state!" label="State"></p:inputText>
-                    <h:outputText value="Country :"></h:outputText>
-                    <p:inputText id="country"  value="#{customerManagedBean.newCustomer.country}" required="true" requiredMessage="Please Enter Country!" label="Country"></p:inputText>
+                                </td>
+                                <td align="left" width="35%">
+                    <p:inputText id="state"  value="#{customerManagedBean.newCustomer.state}" styleClass="redasterisk" required="true" requiredMessage="Please Enter state!" label="State"></p:inputText>
+                                </td>
+                                    <td align="left" width="15%">
+                                        <h:outputText value="Country :"></h:outputText>
+                                    </td>
+                                    <td align="left" width="35%">
+                                        <p:inputText id="country"  value="#{customerManagedBean.newCustomer.country}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Country!" label="Country"></p:inputText>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td align="left" width="15%">
                     <h:outputText value="Postal Code :"></h:outputText>
-                    <p:inputText id="postalcode"  value="#{customerManagedBean.newCustomer.postalcode}" required="true" requiredMessage="Please Enter Postal Code!" label="Postal Code"></p:inputText>
-                    <h:outputText value="Mobile Number :"></h:outputText>
-                    <p:inputText id="mobilenumber"  value="#{customerManagedBean.newCustomer.mobileNumber}" required="true" requiredMessage="Please Enter Mobile Number!" label="Mobile Number"></p:inputText>
-                    <h:outputText value="Homer Number :"></h:outputText>
-                    <p:inputText id="homenumber"  value="#{customerManagedBean.newCustomer.homeNumber}" required="false" requiredMessage="Please Enter Home Number!" label="Home Number"></p:inputText>
-                    <f:facet name="footer">
-                        <p:commandButton value="Submit" action="#{customerManagedBean.create}"/>
-                        <h:button style="padding: .3em 1em;" styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-text ui-c" action="listcustomer?faces-redirect=true" value="Cancel" />
-                    </f:facet>
-                </p:panelGrid>
+                                </td>
+                                <td align="left" width="35%">
+                    <p:inputText id="postalcode"  value="#{customerManagedBean.newCustomer.postalcode}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Postal Code!" label="Postal Code"></p:inputText>
+                                </td>
+                                </tr>
+                        </table>
+                    </p:tab>
+                    </p:accordionPanel>
+                <p:accordionPanel header="Job Details" multiple="true"  toggleSpeed="500" closeSpeed="500" widgetVar="panel" style="margin-bottom:20px">
+                    <p:tab title="Customer Contact Details">
+                            <table style="width: 100%; border-collapse: separate;">
+                                <tr>
+                                <td align="left" width="15%">
+                            <h:outputText value="Mobile Number :"></h:outputText>
+                                </td>
+                                <td align="left" width="35%">
+                            <p:inputText id="mobilenumber"  value="#{customerManagedBean.newCustomer.mobileNumber}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Mobile Number!" label="Mobile Number"></p:inputText>
+                                </td>
+                                    <td align="left" width="15%">
+                                        <h:outputText value="Homer Number :"></h:outputText>
+                                    </td>
+                                    <td align="left" width="35%">
+                                        <p:inputText id="homenumber"  value="#{customerManagedBean.newCustomer.homeNumber}"  label="Home Number"></p:inputText>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td align="left" width="15%">
+                            <h:outputText value="Email :"></h:outputText>
+                                </td>
+                                <td align="left" width="35%">
+                            <p:inputText id="email"  value="#{customerManagedBean.newCustomer.email}" styleClass="redasterisk" required="true" requiredMessage="Please Enter Email!" label="Email"></p:inputText>
+                                </td>
+                                </tr>
+                        </table>
+                    </p:tab>
+                </p:accordionPanel>
+                <div align="center">
+                    <p:commandButton value="Submit" action="#{customerManagedBean.create}"/>
+                    <h:button style="padding: .3em 1em;" styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-text ui-c" action="listcustomer?faces-redirect=true" value="Cancel" />
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>
